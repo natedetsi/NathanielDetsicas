@@ -13,7 +13,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "deploy": "gh-pages -d final",
     "eject": "react-scripts eject"
   },
   "proxy": "http://localhost:5000",
@@ -36,5 +36,7 @@
   "main": "index.js",
   "devDependencies": {},
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "homepage": "https://natedetsi.github.io/myreactportfolio",
+
 }
