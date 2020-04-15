@@ -34,7 +34,8 @@ const highLightInputEmail = useSpring({border:toggle ? '1px solid #5f5f5f' : '2p
 function sendForm(e){
   e.preventDefault();
   if (mail.email.indexOf('@' && ('.')) > -1 && mail.message.length > 40){
-    axios.post('http://localhost:5000/send', {mail});
+    // axios.post('http://localhost:5000/send', {mail});
+    window.location.href ="mailto:nathaniel.detsicas@outlook.com" + `?subject=${mail.company}` + `&body=${mail.message}`;
     setMail({  email: "",
       company: "",
       message: ""})
