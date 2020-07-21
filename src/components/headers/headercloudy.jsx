@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import "../../css/styles.css";
 import "../../css/header.css";
 import Cloud from '.././cloud.jsx';
-import cloud from "../../images/cloudreal.png";
+//import cloud from "../../images/cloudreal.png";
 import plant from "../../images/plant.png";
 
 function HeaderCloudy() {

@@ -1,9 +1,9 @@
 import React from 'react';
-import Header from './header'
-import HeaderCloudy from './headercloudy'
-import HeaderSunny from './headerSunny'
-import HeaderRaining from './headerRain'
-import HeaderSnowing from './headersnow'
+import Header from './header.jsx'
+import HeaderCloudy from './headercloudy.jsx'
+import HeaderSunny from './headerSunny.jsx'
+import HeaderRaining from './headerRain.jsx'
+import HeaderSnowing from './headersnow.jsx'
 ////////////////////////   My code /////////////////////////////////
 // function HeaderLoadOut(props){
 // //log weather from api by city

@@ -7,7 +7,6 @@ function WeatherOption(){
       const [toggle, setToggle] = useState(false);
 
       const toggler = () => {
-
         console.log('clicked')
         setToggle(!toggle);
       }
@@ -16,6 +15,7 @@ function WeatherOption(){
         cursor: toggle ? 'default': 'pointer'
     });
   return(
+
     <div class="drop-down" onClick={toggler}>
       <a.div  className="options" style={open}>
         <div className="option" value="sunny"><a.p  style={open}>Sunny</a.p></div>
@@ -25,6 +25,7 @@ function WeatherOption(){
         <div className="option" value="raining"><a.a style={open}>Raining</a.a></div>
     </a.div>
   </div>
+
   )
 }
 

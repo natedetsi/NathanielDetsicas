@@ -1,18 +1,20 @@
 import React, {useState} from "react";
 import { useSpring } from "react-spring";
 import "./css/styles.css";
-import WeatherOption from './components/weatheroptions.jsx'
-import HeaderLoadOut from './components/headers/headerloadout'
-import Bio from "./components/bio";
-import Projects from "./components/projects";
-import Contact from "./components/contact";
-import Form from "./components/form";
-import Footer from "./components/footer";
+import "./css/projects.css";
+// import WeatherOption from './components/weatheroptions.jsx'
+import HeaderLoadOut from './components/headers/headerloadout.jsx'
+import Bio from "./components/bio.jsx";
+import Projects from "./components/projects.jsx";
+import Contact from './components/contact.jsx';
+// import Form from "./components/form";
+import Footer from "./components/footer.jsx";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/scss/bootstrap.scss";
 import axios from "axios";
 
 export default function App() {
+
   //form show toggler
   const [toggle, setToggle] = useState(false);
   function showForm() {
@@ -70,8 +72,6 @@ function weather(){
   }
 
 }
-
-
   return (
     <div className="App" onLoad={weather}>
       <HeaderLoadOut weather={`${type}`}/>
@@ -82,3 +82,4 @@ function weather(){
     </div>
   );
 }
+

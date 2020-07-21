@@ -49,8 +49,8 @@ function CardSpinRight(props){
                       </div>
                     </div>
                     <div className="card-back">
-                      <a.button className="card-btn" name={props.name} style={dropThree} onClick={props.onClick}> Open </a.button>
-                    </div>
+                  <a.button className="card-btn" name={props.name} onClick={props.onClick} style={dropThree}> Open </a.button>
+                </div>
                   </a.div>
                 </div>
 
