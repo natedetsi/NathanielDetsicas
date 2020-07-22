@@ -13,12 +13,14 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/scss/bootstrap.scss";
 import axios from "axios";
 
+
 export default function App() {
 
   //form show toggler
   const [toggle, setToggle] = useState(false);
   function showForm() {
     setToggle(!toggle);
+    
   }
   const [type, setType] = useState([]);
 
@@ -49,11 +51,10 @@ const [location, setLocation] = useState({
      setLocation({lat: lat, long: long});
   };
 
-console.log(location.long);
 //load weather api with user location
 //selection function working progress..
 function loadWeather(){
-axios.get('http://api.openweathermap.org/data/2.5/weather?lat=' + location.lat + '&lon=' + location.long + '&APPID=58b2dc700c311dc479a633c676f88d95')
+axios.get('https://api.openweathermap.org/data/2.5/weather?lat=' + location.lat + '&lon=' + location.long + `&APPID=58b2dc700c311dc479a633c676f88d95`)
   .then(res => {
     const weatherType = () => {
 
@@ -61,6 +62,7 @@ axios.get('http://api.openweathermap.org/data/2.5/weather?lat=' + location.lat +
 
     };
     setType(weatherType);})
+    .catch(err => console.log(`Opps could not find your weather...`))
 };
 //prevents function running more than once
   let weatherKiller = true;

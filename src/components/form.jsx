@@ -64,7 +64,6 @@ function sendForm(e){
         <input name="company"className="company-name" type="text" placeholder="Company Name" onChange={handleChange} value={mail.company} required />
         <a.textarea
         style={highLightTextArea}
-        name="message"
           className="msg"
           name="message"
           cols="3"

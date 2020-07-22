@@ -11,7 +11,8 @@ function Bio() {
           <p>
             Welcome to my personal profile page, I am an up and coming software
             engineer. Currently studying a Hsc honors in Computing & IT
-            (software). I am passionate, self-motivated and hardworking.
+            (software). I am passionate, self-motivated and hardworking. With a love for 
+            web developement.
           </p>
         </div>
       </div>
@@ -22,22 +23,24 @@ function Bio() {
             <div className="skill-card col-lg-6 col-lg-offset-4">
               <h3>Front-end Web Design</h3>
               <p>
-                Skills in front-end web design, with a focus on user expience.
+                Skilled front-end web designer, with a focus on user expience. Responsive layouts and 
+                attention grabbing design.
               </p>
             </div>
             <div className="skill-card col-lg-6 col-lg-offset-4">
               <h3>Software Development</h3>
-              <p>Full stack development, using the MERN stack.</p>
+              <p>Full stack development, using the MERN stack I have build applications from notepad, to web based applications.
+                With experience using electron for desktop based applications.
+              </p>
             </div>
             <div className="skill-card col-lg-6 col-lg-offset-4">
-              <h3>Responsive design</h3>
-              <p>Responsive desgins, to suit all devices</p>
+              <h3>Problem solving</h3>
+              <p>I am someone who hates inefficiency, but takes a solution based approach. Aiming for fast, simple and maintainable fixes to problems.</p>
             </div>
             <div className="skill-card col-lg-6 col-lg-offset-4">
               <h3>Animations</h3>
               <p>
-                Custom built animations, for a fresh and clean look grabbing the
-                users attention
+                Custom built animations, transitions for a sharp look and smooth operation.
               </p>
             </div>
           </div>
