@@ -34,48 +34,38 @@ export default function App() {
     opacity: toggle ? 1 : 0,
     config: { mass: 4, tension: 100, friction: 30 }
   });
-  // lacation vaiables
-  let lat;
-  let long;
-  let geo = navigator.geolocation;
-  let loc = geo.getCurrentPosition(success);
-//location state
-const [location, setLocation] = useState({
-  lat: '',
-  long: ''
-});
-//get locaion of user and setLocation state
-  function success(pos){
-     lat = pos.coords.latitude;
-     long = pos.coords.longitude;
-     setLocation({lat: lat, long: long});
+ 
+//locate the users and call loadWeather on resolve 
+  function locate(error) {
+    return new Promise(function (resolve) {
+
+        navigator.geolocation.getCurrentPosition(function(pos){
+          resolve(loadWeather(pos.coords.latitude, pos.coords.longitude));
+        },
+          function(error) {
+            if (error.code === error.PERMISSION_DENIED ) {
+              console.log("Denied location access, enjoy some grey clouds :'(")
+            }
+          }
+        )
+      
+     })
   };
+
 
 //load weather api with user location
 //selection function working progress..
-function loadWeather(){
-axios.get('https://api.openweathermap.org/data/2.5/weather?lat=' + location.lat + '&lon=' + location.long + `&APPID=58b2dc700c311dc479a633c676f88d95`)
+function loadWeather(lat, long){
+axios.get('https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + long + `&APPID=58b2dc700c311dc479a633c676f88d95`)
   .then(res => {
     const weatherType = () => {
-
          return res.data.weather[0].main;
-
     };
     setType(weatherType);})
-    .catch(err => console.log(`Opps could not find your weather...`))
 };
-//prevents function running more than once
-  let weatherKiller = true;
-function weather(){
 
-  if(weatherKiller === true){
-    loadWeather();
-    weatherKiller = false;
-  }
-
-}
   return (
-    <div className="App" onLoad={weather}>
+    <div className="App" onLoad={locate}>
       <HeaderLoadOut weather={`${type}`}/>
       <Bio />
       <Projects />

@@ -14,9 +14,9 @@ function Header() {
         </h2>
       </div>
 
-      <img class="plant" src={plant} alt="plant" />
+      <img className="plant" src={plant} alt="plant" />
 
-      <img class="bottom-cloud" src={cloud} alt="cloud" />
+      <img className="bottom-cloud" src={cloud} alt="cloud" />
     </div>
   );
 }
