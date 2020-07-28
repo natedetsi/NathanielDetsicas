@@ -65,19 +65,16 @@ export default function App() {
 
   ;
   console.log(process.env.REACT_APP_WEATHER); //load weather api with user location
-  //selection function working progress..
-
-  function loadWeather(lat, long) {
-    axios.get('https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + long + "&APPID=".concat(process.env.REACT_APP_WEATHER)).then(function (res) {
-      var weatherType = function weatherType() {
-        return res.data.weather[0].main;
-      };
-
-      setType(weatherType);
-    });
-  }
-
-  ; // remove onLoad={locate}
+  // //selection function working progress..
+  // function loadWeather(lat, long){
+  // axios.get('https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + long + `&APPID=${process.env.REACT_APP_WEATHER}`)
+  //   .then(res => {
+  //     const weatherType = () => {
+  //          return res.data.weather[0].main;
+  //     };
+  //     setType(weatherType);})
+  // };
+  // remove onLoad={locate}
 
   return /*#__PURE__*/React.createElement("div", {
     className: "App"
