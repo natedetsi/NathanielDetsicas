@@ -82,7 +82,7 @@ a:hover {
 p {
   font-family: "Montserrat", sans-serif;
   line-height: 2;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 span {
@@ -422,7 +422,12 @@ input:focus {
 }
 
 @media screen and (max-width: 1500px) {
- 
+  .bio {
+    width: 70%;
+  }
+ p {
+   font-size: 0.9rem;
+ }
 }
 @media screen and (max-width: 1000px) {
   .bio {

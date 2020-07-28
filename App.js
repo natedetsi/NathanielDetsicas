@@ -67,7 +67,7 @@ export default function App() {
   //selection function working progress..
 
   function loadWeather(lat, long) {
-    axios.get('https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + long + "&APPID=58b2dc700c311dc479a633c676f88d95").then(function (res) {
+    axios.get('https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + long + "&APPID=".concat(WEATHER_API_KEY)).then(function (res) {
       var weatherType = function weatherType() {
         return res.data.weather[0].main;
       };

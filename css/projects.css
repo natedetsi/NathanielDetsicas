@@ -28,7 +28,8 @@
     z-index: 3;
   }
   .project-image {
-    height: 80%;
+    height: auto;
+    max-width: 80%;
     margin: 0 auto;
     position: absolute;
     top:50%;
