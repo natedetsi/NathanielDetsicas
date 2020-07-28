@@ -63,11 +63,12 @@ export default function App() {
     });
   }
 
-  ; //load weather api with user location
+  ;
+  console.log(process.env.REACT_APP_WEATHER); //load weather api with user location
   //selection function working progress..
 
   function loadWeather(lat, long) {
-    axios.get('https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + long + "&APPID=".concat(WEATHER_API_KEY)).then(function (res) {
+    axios.get('https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + long + "&APPID=".concat(process.env.REACT_APP_WEATHER)).then(function (res) {
       var weatherType = function weatherType() {
         return res.data.weather[0].main;
       };
