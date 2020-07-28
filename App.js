@@ -50,21 +50,20 @@ export default function App() {
       friction: 30
     }
   }); //locate the users and call loadWeather on resolve 
-
-  function locate(error) {
-    return new Promise(function (resolve) {
-      navigator.geolocation.getCurrentPosition(function (pos) {
-        resolve(loadWeather(pos.coords.latitude, pos.coords.longitude));
-      }, function (error) {
-        if (error.code === error.PERMISSION_DENIED) {
-          console.log("Denied location access, enjoy some grey clouds :'(");
-        }
-      });
-    });
-  }
-
-  ;
-  console.log(process.env.REACT_APP_WEATHER); //load weather api with user location
+  // function locate(error) {
+  //   return new Promise(function (resolve) {
+  //       navigator.geolocation.getCurrentPosition(function(pos){
+  //         resolve(loadWeather(pos.coords.latitude, pos.coords.longitude));
+  //       },
+  //         function(error) {
+  //           if (error.code === error.PERMISSION_DENIED ) {
+  //             console.log("Denied location access, enjoy some grey clouds :'(")
+  //           }
+  //         }
+  //       )
+  //    })
+  // };
+  //load weather api with user location
   // //selection function working progress..
   // function loadWeather(lat, long){
   // axios.get('https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + long + `&APPID=${process.env.REACT_APP_WEATHER}`)
