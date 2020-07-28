@@ -77,10 +77,10 @@ export default function App() {
     });
   }
 
-  ;
+  ; // remove onLoad={locate}
+
   return /*#__PURE__*/React.createElement("div", {
-    className: "App",
-    onLoad: locate
+    className: "App"
   }, /*#__PURE__*/React.createElement(HeaderLoadOut, {
     weather: "".concat(type)
   }), /*#__PURE__*/React.createElement(Bio, null), /*#__PURE__*/React.createElement(Projects, null), /*#__PURE__*/React.createElement(Contact, {
