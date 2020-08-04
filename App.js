@@ -28,7 +28,7 @@ import axios from "axios";
 
 function initReactGA() {
   ReactGA.initialize('UA-174555150-1');
-  ReactGA.pageview('/homepage');
+  ReactGA.pageview('/');
 }
 
 export default function App() {
