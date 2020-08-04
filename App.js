@@ -11,6 +11,7 @@ function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 import React, { useState } from "react";
+import ReactGA from 'react-ga';
 import { useSpring } from "react-spring";
 import "./css/styles.css";
 import "./css/projects.css"; // import WeatherOption from './components/weatheroptions.jsx'
@@ -25,7 +26,12 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/scss/bootstrap.scss";
 import axios from "axios";
 export default function App() {
-  //form show toggler
+  function initReactGA() {
+    ReactGA.initialize('UA-174555150-1');
+    ReactGA.pageview('/homepage');
+  } //form show toggler
+
+
   var _useState = useState(false),
       _useState2 = _slicedToArray(_useState, 2),
       toggle = _useState2[0],
