@@ -6,9 +6,7 @@ import HeaderRaining from './headerRain.jsx';
 import HeaderSnowing from './headersnow.jsx'; ////////////////////////   My code /////////////////////////////////
 
 function HeaderLoadOut(props) {
-  //log weather from api by city
-  console.log(props.weather); //convert
-
+  //convert
   var types = {
     weather: props.weather
   }; //check weather load weather
