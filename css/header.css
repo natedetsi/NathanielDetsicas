@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+
+
 /* sunny day css */
 .top-container{
   background-color: #00ccc9;
@@ -7,6 +11,9 @@
 }
 .heading{
   margin-top: 10%;
+}
+.title-heading{
+  font-family: 'Raleway', sans-serif;
 }
 
 .sun{
