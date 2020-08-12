@@ -5,9 +5,8 @@ function Drop(props) {
   var position = {
     left: "".concat(props.style.left, "px"),
     top: "".concat(props.style.top, "px")
-  }; // const position = useSpring({left: `${drops.left}`}, {top: `${drops.left}`})
-
-  return /*#__PURE__*/React.createElement("div", {
+  };
+  return /*#__PURE__*/React.createElement("p", {
     className: "drop",
     style: position
   });

@@ -1,15 +1,6 @@
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
+import _regeneratorRuntime from "@babel/runtime/regenerator";
+import _asyncToGenerator from "@babel/runtime/helpers/asyncToGenerator";
+import _slicedToArray from "@babel/runtime/helpers/slicedToArray";
 import React, { useState } from "react";
 import ReactGA from 'react-ga';
 import { useSpring } from "react-spring";
@@ -25,14 +16,11 @@ import Footer from "./components/footer.jsx";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/scss/bootstrap.scss";
 import axios from "axios";
-
-function initReactGA() {
-  ReactGA.initialize('UA-174555150-1');
-  ReactGA.pageview('/');
-}
-
 export default function App() {
-  //form show toggler
+  // google analytics init
+  ReactGA.initialize('UA-174555150-1');
+  ReactGA.pageview('/homepage'); //form show toggler
+
   var _useState = useState(false),
       _useState2 = _slicedToArray(_useState, 2),
       toggle = _useState2[0],
@@ -56,34 +44,71 @@ export default function App() {
       tension: 100,
       friction: 30
     }
-  }); //locate the users and call loadWeather on resolve 
-  // function locate(error) {
-  //   return new Promise(function (resolve) {
-  //       navigator.geolocation.getCurrentPosition(function(pos){
-  //         resolve(loadWeather(pos.coords.latitude, pos.coords.longitude));
-  //       },
-  //         function(error) {
-  //           if (error.code === error.PERMISSION_DENIED ) {
-  //             console.log("Denied location access, enjoy some grey clouds :'(")
-  //           }
-  //         }
-  //       )
-  //    })
-  // };
-  //load weather api with user location
-  // //selection function working progress..
-  // function loadWeather(lat, long){
-  // axios.get('https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + long + `&APPID=${process.env.REACT_APP_WEATHER}`)
-  //   .then(res => {
-  //     const weatherType = () => {
-  //          return res.data.weather[0].main;
-  //     };
-  //     setType(weatherType);})
-  // };
-  // remove onLoad={locate}
+  }); // locate the users and call loadWeather on resolve 
+
+  function locate(error) {
+    return new Promise(function (resolve) {
+      navigator.geolocation.getCurrentPosition(function (pos) {
+        resolve(loadWeather(pos.coords.latitude, pos.coords.longitude));
+      }, function (error) {
+        if (error.code === error.PERMISSION_DENIED) {
+          console.log("Denied location access, enjoy some grey clouds :'(");
+        }
+      });
+    });
+  }
+
+  ; //fetch weather from server and update page  
+
+  function loadWeather(_x, _x2) {
+    return _loadWeather.apply(this, arguments);
+  }
+
+  function _loadWeather() {
+    _loadWeather = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee(lat, lon) {
+      var result, data, weatherType;
+      return _regeneratorRuntime.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              _context.prev = 0;
+              _context.next = 3;
+              return fetch("http://localhost:3000/weather/".concat(lat, ",").concat(lon));
+
+            case 3:
+              result = _context.sent;
+              _context.next = 6;
+              return result.json();
+
+            case 6:
+              data = _context.sent;
+              _context.next = 9;
+              return data.weather[0].main;
+
+            case 9:
+              weatherType = _context.sent;
+              setType(weatherType);
+              _context.next = 16;
+              break;
+
+            case 13:
+              _context.prev = 13;
+              _context.t0 = _context["catch"](0);
+              throw _context.t0;
+
+            case 16:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee, null, [[0, 13]]);
+    }));
+    return _loadWeather.apply(this, arguments);
+  }
 
   return /*#__PURE__*/React.createElement("div", {
-    className: "App"
+    className: "App",
+    onLoad: locate
   }, /*#__PURE__*/React.createElement(HeaderLoadOut, {
     weather: "".concat(type)
   }), /*#__PURE__*/React.createElement(Bio, null), /*#__PURE__*/React.createElement(Projects, null), /*#__PURE__*/React.createElement(Contact, {

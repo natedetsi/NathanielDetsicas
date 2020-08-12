@@ -12,7 +12,7 @@ function Bio() {
     className: "profile-image",
     src: man,
     alt: "profile"
-  }), /*#__PURE__*/React.createElement("h2", null, "Hello."), /*#__PURE__*/React.createElement("p", null, "Welcome to my personal profile page, I am an up and coming software engineer. Currently studying a Hsc honors in Computing & IT (software). I am passionate, self-motivated and hardworking. With a love for web developement."))), /*#__PURE__*/React.createElement("hr", null), /*#__PURE__*/React.createElement("div", {
+  }), /*#__PURE__*/React.createElement("h2", null, "Hello."), /*#__PURE__*/React.createElement("p", null, "Welcome to my personal profile page, I am an up and coming software engineer. Currently studying a Hsc honors in Computing & IT (software) part time. I am passionate, self-motivated and hardworking. With a love for web developement."))), /*#__PURE__*/React.createElement("hr", null), /*#__PURE__*/React.createElement("div", {
     className: "skills"
   }, /*#__PURE__*/React.createElement("div", {
     className: "container"
