@@ -3,11 +3,10 @@ const path = require( 'path' );
 
 module.exports = {
     context: __dirname,
-    entry: './src/index.js',
+    entry: ['@babel/polyfill', './src/index.js'],
     output: {
-        path: path.resolve( __dirname, 'dist' ),
+        path: path.resolve( __dirname, 'build' ),
         filename: 'main.js',
-        publicPath: '/',
     },
     devServer: {
         historyApiFallback: true
@@ -52,7 +51,8 @@ module.exports = {
     plugins: [
         new HtmlWebPackPlugin({
             template: path.resolve( __dirname, 'public/index.html' ),
-            filename: 'index.html'
+            filename: 'index.html',
+            favicon: "./public/man2.ico"
         })
     ]
 };

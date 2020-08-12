@@ -10,9 +10,9 @@ function Bio() {
           <h2>Hello.</h2>
           <p>
             Welcome to my personal profile page, I am an up and coming software
-            engineer. Currently studying a Hsc honors in Computing & IT
-            (software). I am passionate, self-motivated and hardworking. With a love for 
-            web developement.
+            engineer. Currently studying a Bsc honors in Computing & IT
+            (software) part time. I am passionate, self-motivated and hardworking. With a love for 
+            web developement and experience in modern langauages and frame works.
           </p>
         </div>
       </div>
@@ -23,13 +23,13 @@ function Bio() {
             <div className="skill-card col-lg-6 col-lg-offset-4">
               <h3>Front-end Web Design</h3>
               <p>
-                Skilled front-end web designer, with a focus on user expience. Responsive layouts and 
+                Skilled front-end web designer, with a focus on user experience. Responsive layouts and 
                 attention grabbing design.
               </p>
             </div>
             <div className="skill-card col-lg-6 col-lg-offset-4">
               <h3>Software Development</h3>
-              <p>Full stack development, using the MERN stack I have build applications from notepad, to web based applications.
+              <p>Full stack development, using the MERN stack I have built applications from notepads, to web based applications.
                 With experience using electron for desktop based applications.
               </p>
             </div>

@@ -54,9 +54,12 @@ h3 {
   font-family: "Montserrat", sans-serif;
   color: #633a82;
 }
-h4 {
+h4, h5 {
   margin: 0;
   color: #633a82;
+}
+h5 {
+  font-weight: bolder;
 }
 ul {
   list-style: none;
@@ -82,7 +85,7 @@ a:hover {
 p {
   font-family: "Montserrat", sans-serif;
   line-height: 2;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 span {
@@ -186,8 +189,9 @@ td {
   height: 60%;
   position: absolute;
   bottom: -2%;
-  right: 50%;
-  transform: translate(50%, 0);
+  left: 45%;
+  transform: translate(-45%, 0);
+  transition: all 0.2s linear;
   margin: 0;
   z-index: 1;
 }
@@ -223,7 +227,7 @@ td {
   line-height: 2;
   transition: 0.5s ease;
   border: none;
-  height: 180px;
+  height: auto;
   width: 80%;
 }
 
@@ -248,7 +252,7 @@ td {
   width: 100%;
   position: relative;
   padding: 0;
-  min-height: 250px;
+  min-height: 300px;
   overflow:auto;
   z-index:0;
 }
@@ -422,10 +426,25 @@ input:focus {
 }
 
 @media screen and (max-width: 1500px) {
- 
+  .bio {
+    width: 70%;
+  }
+ p {
+   font-size: 0.9rem;
+ }
+ .plant {
+   height: 50%;
+ }
 }
 @media screen and (max-width: 1000px) {
   .bio {
+    width: 80%;
+    font-size: 0.8rem;
+  }
+  .plant {
+    height: 40%;
+  }
+  .contact-me-form {
     width: 80%;
   }
 }

@@ -10,14 +10,18 @@ function HeaderRaining() {
 // rain maker function creates an arring of javascript objects
 // the object are then used to style the Rain component via props
   const [drops, setDrops] = useState([{left: '100', top: '100'}]);
+
+
 //number of rain drops
-      const nbDrop = 300;
+      
       //random position of rain drops
       function randRange(minNum, maxNum){
         return (Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum);
       }
+
       //create a rain drop for as long as i is less than number of drops
         function createRain(){
+          const nbDrop = 200;
           for(let i = 0; i < nbDrop; i++){
             let leftpos = randRange(0, 1900);
             let toppos = randRange(-1000, 1400);
@@ -28,6 +32,8 @@ function HeaderRaining() {
             });
           };
         }
+
+  
     //below we map through the array of drops and render a Drop component for each drop
   return (
     <div className="top-container" onLoad={createRain}>

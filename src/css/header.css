@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+
+
 /* sunny day css */
 .top-container{
   background-color: #00ccc9;
@@ -7,6 +11,9 @@
 }
 .heading{
   margin-top: 10%;
+}
+.title-heading{
+  font-family: 'Raleway', sans-serif;
 }
 
 .sun{
@@ -35,9 +42,9 @@
 /* rain */
 
 .drop {
-  background: linear-gradient( to bottom, rgba(0,127,239,1)0%, rgba(51,153,255,0.2)100%);
+  background: linear-gradient( to top, rgba(0,127,239,1)0%, rgba(51,153,255,0.2)100%);
   width: 1.3px;
-  height: 89px;
+  height: 30px;
   position: absolute;
   padding: 0;
   animation: fall 0.6s linear infinite;

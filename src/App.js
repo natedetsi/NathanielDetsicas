@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import ReactGA from 'react-ga';
 import { useSpring } from "react-spring";
 import "./css/styles.css";
 import "./css/projects.css";
@@ -14,7 +15,13 @@ import "bootstrap/scss/bootstrap.scss";
 import axios from "axios";
 
 
+
 export default function App() {
+
+  // google analytics init
+  ReactGA.initialize('UA-174555150-1');
+  ReactGA.pageview('/homepage');
+  
 
   //form show toggler
   const [toggle, setToggle] = useState(false);
@@ -35,38 +42,42 @@ export default function App() {
     config: { mass: 4, tension: 100, friction: 30 }
   });
  
-//locate the users and call loadWeather on resolve 
+  
+  
+  // locate the users and call loadWeather on resolve 
   function locate(error) {
     return new Promise(function (resolve) {
-
-        navigator.geolocation.getCurrentPosition(function(pos){
-          resolve(loadWeather(pos.coords.latitude, pos.coords.longitude));
-        },
-          function(error) {
-            if (error.code === error.PERMISSION_DENIED ) {
-              console.log("Denied location access, enjoy some grey clouds :'(")
-            }
-          }
-        )
+      navigator.geolocation.getCurrentPosition(function(pos){
+       resolve(loadWeather(pos.coords.latitude, pos.coords.longitude));
+      },
+      function(error) {
+        if (error.code === error.PERMISSION_DENIED ) {
+          console.log("Denied location access, enjoy some grey clouds :'(")
+        }
+      }
+      )
       
-     })
+    })
   };
+  
+  //fetch weather from server and update page  
+   async function loadWeather(lat, lon) { 
+    try {
+      const result  = await fetch(`http://localhost:3000/weather/${lat},${lon}`);
+      const data = await result.json();
+      const weatherType = await data.weather[0].main;
+      setType(weatherType);
+    } catch (error) {
+      throw error;
+    } 
+  }
 
 
-//load weather api with user location
-//selection function working progress..
-function loadWeather(lat, long){
-axios.get('https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + long + `&APPID=58b2dc700c311dc479a633c676f88d95`)
-  .then(res => {
-    const weatherType = () => {
-         return res.data.weather[0].main;
-    };
-    setType(weatherType);})
-};
+
 
   return (
-    <div className="App" onLoad={locate}>
-      <HeaderLoadOut weather={`${type}`}/>
+    <div className="App"onLoad={locate}> 
+      <HeaderLoadOut weather={`${type}`} />
       <Bio />
       <Projects />
       <Contact onClicked={showForm} style={show}/>

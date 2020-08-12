@@ -10,9 +10,9 @@ const position = {
   left: `${props.style.left}px`,
   top: `${props.style.top}px`
 }
-  // const position = useSpring({left: `${drops.left}`}, {top: `${drops.left}`})
+  
   return(
-<div className="drop" style={position}></div>
+<p className="drop" style={position}></p>
   )
 }
 
