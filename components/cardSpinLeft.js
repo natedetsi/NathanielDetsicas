@@ -40,14 +40,15 @@ function CardSpinLeft(props) {
   // setDisplay(!display);
   // }
 
-  return /*#__PURE__*/React.createElement("div", {
-    className: "card-box col-lg-4 col-md-6",
+  return /*#__PURE__*/React.createElement(a.div, {
+    className: "card-box ",
     onMouseEnter: function onMouseEnter() {
       return setIsToggledThree(!isToggledThree);
     },
     onMouseLeave: function onMouseLeave() {
       return setIsToggledThree(!isToggledThree);
-    }
+    },
+    id: props.id
   }, /*#__PURE__*/React.createElement(a.div, {
     className: "card",
     style: spinThree

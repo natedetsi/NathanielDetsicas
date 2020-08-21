@@ -2,10 +2,6 @@
 
 
 
-/* sunny day css */
-.top-container{
-  background-color: #00ccc9;
-}
 .top-cloud, .bottom-cloud{
   width: 200px;
 }
@@ -15,12 +11,15 @@
 .title-heading{
   font-family: 'Raleway', sans-serif;
 }
+.name-title {
+  text-decoration: none;
 
-.sun{
+}
+.sun {
   height: 300px;
   margin-bottom: 20px;
-  position: absolute;
-  left: 5%;
+  position: fixed;
+  left: 10%;
   top:5%;
   animation: rotate 7s infinite linear;
 }
@@ -68,7 +67,7 @@
 /* cloudy day  */
 
 .cloud {
-  position: absolute;
+  position: fixed;
   opacity: 85%;
   animation: move 40s linear infinite;
 }

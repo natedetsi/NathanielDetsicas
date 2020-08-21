@@ -148,23 +148,27 @@ td {
   animation: stand 1s ease forward;
   color: #f1fcfc;
 }
+.title-span {
+  text-decoration: none;
+  color: #fff;
+}
 .subtitle-1 {
   color: #f1fcfc;
 }
 .top-cloud {
-  position: absolute;
-  right: 500px;
-  top: 130px;
+  position: fixed;
+  right: 10%;
+  top: 5%;
   opacity: 85%;
-  animation: wind-right 20s linear infinite;
+  /* animation: wind-right 20s linear infinite; */
 }
 
 .bottom-cloud {
-  position: absolute;
-  bottom: 300px;
-  left: -100px;
+  position: fixed;
+  bottom: 40%;
+  left: 10%;
   opacity: 85%;
-  animation: wind-left 20s linear infinite;
+  /* animation: wind-left 20s linear infinite; */
 }
 
 @keyframes wind-left {
@@ -200,7 +204,7 @@ td {
   margin: 0 auto 0;
   text-align: left;
   line-height: 2;
-  transition: all 1s ease;
+  transition: all 0.5s ease;
 }
 .bio:hover {
   box-shadow: 0 0 2px 3px #72b5b7;
@@ -208,10 +212,10 @@ td {
 
 }
 .container > .row {
-  transition: all ease 1s;
+  transition: all ease 0.3s;
 }
 .container > .row:hover {
-  box-shadow: 0 0 2px 3px #72b5b7;
+  box-shadow: 0 0 10px -3px #9f9f9f;
   transform: scale(1.02);
 }
 
@@ -236,7 +240,7 @@ td {
   margin: 0 auto;
 }
 .top-container {
-  background-color: #40e0d0;
+  background-color: #00ccc9;
   background-image: url("https://www.transparenttextures.com/patterns/arches.png");
   position: relative;
   height: 80vh;

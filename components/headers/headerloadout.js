@@ -22,7 +22,7 @@ function HeaderLoadOut(props) {
   } else if (types.weather == 'Snow') {
     return /*#__PURE__*/React.createElement(HeaderRaining, null);
   } else {
-    return /*#__PURE__*/React.createElement(Header, null);
+    return /*#__PURE__*/React.createElement(HeaderSunny, null);
   }
 
   console.log(types.weather);

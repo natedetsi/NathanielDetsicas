@@ -42,7 +42,7 @@ function CardSpinRight(props) {
   // }
 
   return /*#__PURE__*/React.createElement("div", {
-    className: "card-box col-lg-4 col-md-6",
+    className: "card-box ",
     onMouseEnter: function onMouseEnter() {
       return setIsToggledThree(!isToggledThree);
     },
