@@ -27,12 +27,7 @@ function Projects() {
   var _useState3 = useState(),
       _useState4 = _slicedToArray(_useState3, 2),
       slide = _useState4[0],
-      setSlide = _useState4[1];
-
-  var _useState5 = useState(true),
-      _useState6 = _slicedToArray(_useState5, 2),
-      show = _useState6[0],
-      setShow = _useState6[1]; //slide projection animation
+      setSlide = _useState4[1]; //slide projection animation
 
 
   var slideIn = useSpring({
@@ -45,27 +40,29 @@ function Projects() {
   }); //toggle state function, grabs event name toggles state and sets slide gif to the e.target.name
 
   function toggle(e) {
-    var name = e.target.name;
+    var name = e.currentTarget.name;
 
     switch (name) {
-      case 'notepad':
+      case 'Notepad App':
         setSlide(notepadgif);
         setDisplay(true);
         break;
 
-      case 'pokemongame':
+      case 'Pokemon Game':
         setSlide(pokemongamegif);
         console.log('clicked');
         setDisplay(true);
         break;
 
-      case 'notemaker':
+      case 'Note Maker':
         setSlide(notemakergif);
         setDisplay(true);
         break;
 
       default:
-        null;
+        console.log(e.currentTarget);
+        setSlide(notemakergif);
+        setDisplay(true);
         break;
     }
   }
@@ -117,7 +114,7 @@ function Projects() {
     className: "project-container"
   }, /*#__PURE__*/React.createElement("div", {
     className: "row"
-  }, show ? cards.map(function (item) {
+  }, cards.map(function (item) {
     return /*#__PURE__*/React.createElement(CardSpinLeft, {
       onClick: toggle,
       key: item.key,
@@ -127,14 +124,6 @@ function Projects() {
       title: item.title,
       paragraph: item.content
     });
-  }) : /*#__PURE__*/React.createElement(CardSpinLeft, {
-    onClick: toggle,
-    key: tempCards.key,
-    id: tempCards.key,
-    image: tempCards.img,
-    name: tempCards.title,
-    title: tempCards.title,
-    paragraph: tempCards.content
   })), /*#__PURE__*/React.createElement(Projection, {
     gif: "".concat(slide),
     style: slideIn,

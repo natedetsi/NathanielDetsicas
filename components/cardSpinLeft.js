@@ -32,13 +32,25 @@ function CardSpinLeft(props) {
       tension: 180,
       friction: 18
     }
-  }); // const [display, setDisplay] = useState(false);
-  //
-  // const slideIn = useSpring({left: display ? '50%': '-300%', config: {mass: 2, tension: 100, friction:30}})
-  //
-  // function open(){
-  // setDisplay(!display);
-  // }
+  });
+
+  var _useState3 = useState(false),
+      _useState4 = _slicedToArray(_useState3, 2),
+      display = _useState4[0],
+      setDisplay = _useState4[1];
+
+  var slideIn = useSpring({
+    left: display ? '50%' : '-300%',
+    config: {
+      mass: 2,
+      tension: 100,
+      friction: 30
+    }
+  });
+
+  function open() {
+    setDisplay(!display);
+  }
 
   return /*#__PURE__*/React.createElement(a.div, {
     className: "card-box ",

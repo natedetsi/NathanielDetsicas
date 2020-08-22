@@ -8,7 +8,7 @@ import "./css/styles.css";
 import "./css/projects.css"; // import WeatherOption from './components/weatheroptions.jsx'
 
 import HeaderLoadOut from './components/headers/headerloadout.jsx';
-import Bio from "./components/bio.jsx";
+import Bio from "./components/bio/bio.jsx";
 import Projects from "./components/projects.jsx";
 import Contact from './components/contact.jsx'; // import Form from "./components/form";
 

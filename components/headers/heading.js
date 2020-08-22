@@ -2,7 +2,7 @@ import _slicedToArray from "@babel/runtime/helpers/slicedToArray";
 import React, { useState } from "react";
 import "../../css/styles.css";
 import "../../css/header.css";
-import { useTransition, animated as a } from "react-spring";
+import { useTransition, useTrail, animated as a } from "react-spring";
 
 function Heading() {
   var _useState = useState([{
