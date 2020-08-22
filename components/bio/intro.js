@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useSpring, animated as a } from "react-spring";
 import man from "../../images/man.png";
-import { set } from 'react-ga';
 
 function Intro() {
   // const [on, set] = useState(false);
