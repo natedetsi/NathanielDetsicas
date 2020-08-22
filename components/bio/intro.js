@@ -13,8 +13,7 @@ function Intro() {
   //     }
   // }
   return /*#__PURE__*/React.createElement("div", {
-    className: "profile",
-    onScroll: change
+    className: "profile"
   }, /*#__PURE__*/React.createElement(a.div, {
     className: "bio",
     style: props
