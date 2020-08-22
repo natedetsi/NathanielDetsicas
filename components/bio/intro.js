@@ -14,8 +14,7 @@ function Intro() {
   return /*#__PURE__*/React.createElement("div", {
     className: "profile"
   }, /*#__PURE__*/React.createElement(a.div, {
-    className: "bio",
-    style: props
+    className: "bio"
   }, /*#__PURE__*/React.createElement("img", {
     className: "profile-image",
     src: man,
