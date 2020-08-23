@@ -60,7 +60,6 @@ function Projects() {
         break;
 
       default:
-        console.log(e.currentTarget);
         setSlide(notemakergif);
         setDisplay(true);
         break;

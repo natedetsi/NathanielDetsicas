@@ -1,8 +1,8 @@
 import _slicedToArray from "@babel/runtime/helpers/slicedToArray";
 import React, { useState } from "react";
+import { useSpring, animated as a } from "react-spring";
 import "../../css/styles.css";
 import "../../css/header.css";
-import { useSpring, animated as a } from "react-spring";
 import Heading from './heading.jsx';
 import cloud from "../../images/sunnycloud.png";
 import plant from "../../images/plant.png";
@@ -43,7 +43,7 @@ function HeaderSunny() {
     setTimeout(function () {
       setLoad(!load);
       console.log('clicked');
-    }, 500);
+    }, 600);
   };
 
   return /*#__PURE__*/React.createElement("div", {

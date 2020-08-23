@@ -206,18 +206,11 @@ td {
   line-height: 2;
   transition: all 0.5s ease;
 }
-.bio:hover {
-  box-shadow: 0 0 2px 3px #72b5b7;
-  transform: scale(1.02);
 
-}
 .container > .row {
   transition: all ease 0.3s;
 }
-.container > .row:hover {
-  box-shadow: 0 0 10px -3px #9f9f9f;
-  transform: scale(1.02);
-}
+
 
 /* card section */
 .skills {
