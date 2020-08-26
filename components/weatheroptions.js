@@ -10,7 +10,6 @@ function WeatherOption() {
       setToggle = _useState2[1];
 
   var toggler = function toggler() {
-    console.log('clicked');
     setToggle(!toggle);
   };
 

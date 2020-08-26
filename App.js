@@ -15,12 +15,11 @@ import Contact from './components/contact.jsx'; // import Form from "./component
 import Footer from "./components/footer.jsx";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/scss/bootstrap.scss";
-import axios from "axios";
 export default function App() {
   // google analytics init
-  ReactGA.initialize('UA-174555150-1');
-  ReactGA.pageview('/homepage'); //form show toggler
-
+  // ReactGA.initialize('UA-174555150-1');
+  // ReactGA.pageview('/homepage');
+  //form show toggler
   var _useState = useState(false),
       _useState2 = _slicedToArray(_useState, 2),
       toggle = _useState2[0],

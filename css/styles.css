@@ -201,12 +201,27 @@ td {
 }
 .bio {
   width: 50%;
+  display: block;
   margin: 0 auto 0;
   text-align: left;
   line-height: 2;
   transition: all 0.5s ease;
 }
+.title h4 {
+  margin-left: 50%;
+  transform: translate(-50%);
+}
+.bio-paragraph {
+  overflow: hidden;
+}
 
+.profile-image {
+  width: 150px;
+  height: 150px;
+  float: left;
+  margin-right: 20px;
+  border-radius: 100%;
+}
 .container > .row {
   transition: all ease 0.3s;
 }
@@ -368,13 +383,7 @@ input:focus {
   opacity: 0.7;
 }
 
-.profile-image {
-  width: 150px;
-  height: 150px;
-  float: left;
-  margin-right: 20px;
-  border-radius: 100%;
-}
+
 .skills-image {
   width: 25%;
   height: 25%;
