@@ -79,7 +79,7 @@ function Projects() {
     key: "1",
     img: "".concat(pokemongame),
     title: "Pokemon Game",
-    content: "This is learning game to help kids read, listen and spell. Built with an OOP focus. Using API's to load the pokemon"
+    content: "This is learning game to help kids read, listen and spell. Making use of API's to load the pokemon"
   }, {
     key: "2",
     img: "".concat(notepad),

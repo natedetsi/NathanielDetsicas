@@ -200,7 +200,8 @@ td {
   z-index: 1;
 }
 .bio {
-  width: 50%;
+  width: 65%;
+  max-width: 1050px;
   display: block;
   margin: 0 auto 0;
   text-align: left;
