@@ -16,11 +16,11 @@ function Skills() {
     right: true
   }, /*#__PURE__*/React.createElement("div", {
     className: "skill-card col-lg-6 col-lg-offset-4"
-  }, /*#__PURE__*/React.createElement("h3", null, "Software Development"), /*#__PURE__*/React.createElement("p", null, "Full stack development, using the MERN stack I have built applications from notepads, to web based applications. With experience using electron for desktop based applications."))), /*#__PURE__*/React.createElement(Slide, {
+  }, /*#__PURE__*/React.createElement("h3", null, "Software Development"), /*#__PURE__*/React.createElement("p", null, "Experience designing, implementing and testing web apps. Using Vanilla JavaScript, React, Node and Electron. Inconjuction with Material-UI, Tailwindcss and bootstrap."))), /*#__PURE__*/React.createElement(Slide, {
     left: true
   }, /*#__PURE__*/React.createElement("div", {
     className: "skill-card col-lg-6 col-lg-offset-4"
-  }, /*#__PURE__*/React.createElement("h3", null, "Problem solving"), /*#__PURE__*/React.createElement("p", null, "I am someone who hates inefficiency, but takes a solution based approach. Aiming for fast, simple and maintainable fixes to problems."))), /*#__PURE__*/React.createElement(Slide, {
+  }, /*#__PURE__*/React.createElement("h3", null, "Problem solving"), /*#__PURE__*/React.createElement("p", null, "I am someone who loves efficiency, taking a solution based approach. Aiming for fast, simple and maintainable fixes to problems."))), /*#__PURE__*/React.createElement(Slide, {
     right: true
   }, /*#__PURE__*/React.createElement("div", {
     className: "skill-card col-lg-6 col-lg-offset-4"

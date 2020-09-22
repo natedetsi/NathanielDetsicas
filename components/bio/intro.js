@@ -17,7 +17,7 @@ function Intro() {
     className: "profile-image",
     src: man,
     alt: "profile"
-  }), /*#__PURE__*/React.createElement("p", null, "As a developer I am, passionate about my work I strive to constantly learn and develop. A creative eye for front end web development creating clean page transitions dynamic loading and a high quality user experience. Driven by a challenge I have developed great problem solving skills.")))));
+  }), /*#__PURE__*/React.createElement("p", null, "As a developer, I am passionate about my work I strive to constantly learn and develop. A creative eye for front end web development creating clean page transitions dynamic loading and a high quality user experience. Driven by a challenge I have developed great problem solving skills.")))));
 }
 
 export default Intro;

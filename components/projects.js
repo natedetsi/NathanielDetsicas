@@ -3,7 +3,9 @@ import React, { useState } from "react";
 import CardSpinRight from './cardSpinRight.jsx';
 import CardSpinLeft from './cardSpinLeft.jsx';
 import notepadgif from '../video/notepad.gif';
-import notepad from '../images/notepad.png';
+import notepadImg from '../images/notepad.png';
+import pixaBayGif from '../video/PixaBay.gif';
+import pixaBayImg from '../images/PixaBay.png';
 import notemaker from '../images/NoteMaker.png';
 import notemakergif from '../video/notemaker.gif';
 import pokemongame from '../images/pokemongame.png';
@@ -59,6 +61,11 @@ function Projects() {
         setDisplay(true);
         break;
 
+      case 'Photo Gallery':
+        setSlide(pixaBayGif);
+        setDisplay(true);
+        break;
+
       default:
         setSlide(notemakergif);
         setDisplay(true);
@@ -82,33 +89,15 @@ function Projects() {
     content: "This is learning game to help kids read, listen and spell. Making use of API's to load the pokemon"
   }, {
     key: "2",
-    img: "".concat(notepad),
-    title: "Notepad App",
+    img: "".concat(pixaBayImg),
+    title: "Photo Gallery",
+    content: "A responsive photo and  video gallery, built with React, Material-UI and Tailwindcss. Using the Pixabay API to fetch data."
+  }, {
+    key: "3",
+    img: "".concat(notepadImg),
+    title: "Note Pad",
     content: "Fully functional NotePad app with get, post, delete requests to a mongo DB."
-  }]; //  let tempCards = [];
-  // document.querySelectorAll('.card-box').forEach(elem => {
-  //   elem.addEventListener('mouseenter',(e) => {
-  //     document.querySelectorAll('.card-box').forEach(elem => {
-  //       if (elem != e.target) {
-  //         tempCards = cards.filter(item => item === e.target);
-  //         setShow(!show)
-  //         elem.style.opacity = "0";
-  //         elem.style.display = "block";
-  //      }
-  //     })
-  //     })
-  //   })
-  // document.querySelectorAll('.card-box').forEach(elem => {
-  //   elem.addEventListener('mouseleave',(e) => {
-  //     document.querySelectorAll('.card-box').forEach(elem => {
-  //       if (elem != e.target) {
-  //          elem.style.opacity = "1";
-  //          elem.style.display = "inherit";
-  //       }
-  //     })
-  //   })
-  // })
-
+  }];
   return /*#__PURE__*/React.createElement("div", {
     className: "project-container"
   }, /*#__PURE__*/React.createElement("div", {
